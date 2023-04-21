@@ -1,0 +1,1 @@
+# blazor-dotnet-core-hosted-aad-b2c
