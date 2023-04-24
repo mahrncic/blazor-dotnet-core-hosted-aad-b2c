@@ -16,7 +16,7 @@ builder.Services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().Cre
 builder.Services.AddMsalAuthentication(options =>
 {
     builder.Configuration.Bind("AzureAdB2C", options.ProviderOptions.Authentication);
-    options.ProviderOptions.DefaultAccessTokenScopes.Add("https://infinumtest.onmicrosoft.com/8ef9c6bf-8b96-4bb4-8225-b430d31ff5cf/API.Access");
+    options.ProviderOptions.DefaultAccessTokenScopes.Add("https://<TENANTNAME>.onmicrosoft.com/<CLIENT_ID>/API.Access");
 });
 
 await builder.Build().RunAsync();
